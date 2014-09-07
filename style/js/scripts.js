@@ -16,27 +16,6 @@ $(document).ready(function() {
   });
 });
 
-/*-----------------------------------------------------------------------------------*/
-/*	STICKY NAVIGATION
-/*-----------------------------------------------------------------------------------*/
-$(document).ready(function () {
-"use strict";
-    var menu = $('.navbar'),
-        pos = menu.offset();
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > pos.top + menu.height() && menu.hasClass('default') && $(this).scrollTop() > 150) {
-            menu.fadeOut('fast', function () {
-                $(this).removeClass('default').addClass('fixed').fadeIn('fast');
-            });
-        } else if ($(this).scrollTop() <= pos.top + 150 && menu.hasClass('fixed')) {
-            menu.fadeOut(0, function () {
-                $(this).removeClass('fixed').addClass('default').fadeIn(0);
-            });
-        }
-    });
-
-});
 $(document).ready(function() {
 "use strict";
 	$('.offset').css('padding-top', $('.navbar').height() + 'px');
